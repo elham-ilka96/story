@@ -1,0 +1,156 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6c63ff, #8f94fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 35px;
+  font-size: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.form select,
+.form button {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form select {
+  flex: 1;
+  min-width: 200px;
+  background: #f8f9ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form select:focus {
+  border-color: #6c63ff;
+}
+
+.form-submit {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  min-width: 120px;
+}
+
+.form-submit:hover {
+  background: #5548ff;
+  transform: translateY(-2px);
+}
+
+.card {
+  margin-top: 35px;
+}
+
+.card-item {
+  background: #f8f9ff;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  border-left: 6px solid #6c63ff;
+  animation: fadeIn 0.5s ease;
+}
+
+.card-activity {
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
+
+.card-info {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card-type,
+.card-participants {
+  background: #6c63ff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+}
+
+.tag-error {
+  margin-top: 20px;
+  background: #ffe5e5;
+  color: #d63031;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form select,
+  .form button {
+    width: 100%;
+  }
+
+  .card-activity {
+    font-size: 1.2rem;
+  }
+}
